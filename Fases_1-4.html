@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objects</title>
+
+    <script>
+
+ //FASE 1 (opció a)
+
+
+var name = "Pilar";
+var names = name.split('');
+var vocal =["a","e","i","o","u"];
+
+for(i = 0; i < names.length; i++){
+    if(vocal.indexOf(names[i])!=-1){
+        console.log(names[i] + " VOCAL");  
+    }
+ else {
+    console.log(names[i] + " CONSONANTE");
+}
+}
+
+//FASE 1 (opció b)
+
+    var myNombre = "Pilar";
+    var letras = ["a","e","i","o","u"];
+
+for(i = 0; i < name.length; i++){
+    if(name[i] === "a" || name[i]=== "e" || name[i]=== "i" || name[i]=== "o" || name[i]=== "u") { 
+    
+        console.log(name[i] + " es una vocal");  
+    
+    } else {
+    console.log(name[i] + " es una consonante");
+}
+    }
+
+
+    // isNaN
+
+
+var nombre = "P1lar";
+var nombres = nombre.split('');
+
+for(i = 0; i < nombres.length; i++){
+    if(isNaN(nombres[i])){
+        console.log("ben fet");  //true
+    }
+ else {
+    console.log ("els noms de persones no contenen números!"); //false
+}
+}
+
+
+// FASE 3: MAP EXERCICE  
+
+
+var letters = ["p", "i", "l", "a", "r", "r"];
+var myMap = new Map();
+
+for(i = 0; i < letters.length; i++){
+    letterFunction(letters[i]);
+
+};
+ 
+ function letterFunction(letters){
+if (myMap.has(letters) === false){
+ myMap.set(letters,1);
+} else {
+myMap.set(letters,myMap.get(letters)+1) ;
+}
+};
+
+console.log(myMap);
+//FASE 4
+
+var cognom = ["n", "i", "c", "o", "l", "a", "u"];
+var cognom2 = ["s","e", "r", "r", "a"];
+
+
+function myFullName(){
+
+    cognom.push(" ");
+    cognom = cognom.concat(cognom2);
+    console.log(cognom);
+}
+
+myFullName();
+
+    </script>
+</head>
+<body>
+    <h1>Objects</h1>
+    
+</body>
+</html>
